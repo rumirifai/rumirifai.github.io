@@ -18,15 +18,6 @@
       image: "/images/codetid.png",
     },
     {
-      title: "Wawacan Digital (Full-Stack)",
-      description: "Semantic website for reading and searching Sundanese Wawacan manuscripts.",
-      tags: ["FastAPI", "SvelteKit"],
-      linkBE: "https://github.com/rumirifai/wawacan-api",
-      linkFE: "https://github.com/rumirifai/wawacan-web",
-      linkDemo: "https://wawacan-web.netlify.app",
-      image: "/images/wawacan.png",
-    },
-    {
       title: "Becycle - Waste Exchange (Full-Stack)",
       description: "Collaborative web application for management and exchange of recyclable waste, part of the PPL project.",
       tags: ["Express.js", "Flask", "React.js"],
@@ -36,12 +27,13 @@
       image: "/images/becycle.png",
     },
     {
-      title: "Dominant Color Picker (Web Tool)",
-      description: "Web tool to extract dominant color palette from user-uploaded images.",
-      tags: ["Python", "KMeans", "Streamlit"],
-      linkBE: "https://github.com/rumirifai/Dominant-Color-Picker-Website",
-      linkDemo: "https://docopick.streamlit.app/",
-      image: "/images/docopick.png",
+      title: "Wawacan Digital (Full-Stack)",
+      description: "Semantic website for reading and searching Sundanese Wawacan manuscripts.",
+      tags: ["FastAPI", "SvelteKit"],
+      linkBE: "https://github.com/rumirifai/wawacan-api",
+      linkFE: "https://github.com/rumirifai/wawacan-web",
+      linkDemo: "https://wawacan-web.netlify.app",
+      image: "/images/wawacan.png",
     },
     {
       title: "KEPO 2024 (Static Web)",
@@ -50,6 +42,14 @@
       linkBE: "https://github.com/rumirifai/KEPO-2024-WEB-APP",
       linkDemo: "https://kepo2024.vercel.app/",
       image: "/images/kepo2024.png",
+    },
+    {
+      title: "Dominant Color Picker (Web Tool)",
+      description: "Web tool to extract dominant color palette from user-uploaded images.",
+      tags: ["Python", "KMeans", "Streamlit"],
+      linkBE: "https://github.com/rumirifai/Dominant-Color-Picker-Website",
+      linkDemo: "https://docopick.streamlit.app/",
+      image: "/images/docopick.png",
     },
   ];
 
