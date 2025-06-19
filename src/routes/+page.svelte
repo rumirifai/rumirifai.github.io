@@ -3,7 +3,7 @@
     title: string;
     description: string;
     tags: string[];
-    linkBE: string; 
+    linkBE?: string; 
     linkFE?: string;
     linkDemo?: string;
     image?: string;
@@ -11,11 +11,11 @@
 
   const projects: Project[] = [
     {
-      title: "Codetid API (Backend)",
-      description: "Codet.id mobile application RESTful API, for Capstone Project Bangkit 2025 batch 2",
-      tags: ["Express.js", "FastAPI", "Google Cloud Platform", "Google Cloud SQL"],
-      linkBE: "https://github.com/rumirifai/codetid-api",
-      image: "/images/codetid.png",
+      title: "Himatif Apps V2",
+      description: "Official website of the Unpad Informatics Engineering Student Association",
+      tags: ["Express.js", "React.js", "MySQL"],
+      linkDemo: "https://apps.himatif.org/",
+      image: "/images/himapps.png",
     },
     {
       title: "Becycle - Waste Exchange (Full-Stack)",
@@ -36,12 +36,11 @@
       image: "/images/wawacan.png",
     },
     {
-      title: "KEPO 2024 (Static Web)",
-      description: "A static informative website for the KEPO 2024 event, designed to be fast, responsive, and easily accessible to participants.",
-      tags: ["Javascripts", "HTML", "CSS"],
-      linkBE: "https://github.com/rumirifai/KEPO-2024-WEB-APP",
-      linkDemo: "https://kepo2024.vercel.app/",
-      image: "/images/kepo2024.png",
+      title: "Codetid API (Backend)",
+      description: "Codet.id mobile application RESTful API, for Capstone Project Bangkit 2025 batch 2",
+      tags: ["Express.js", "FastAPI", "Google Cloud Platform", "Google Cloud SQL"],
+      linkBE: "https://github.com/rumirifai/codetid-api",
+      image: "/images/codetid.png",
     },
     {
       title: "Dominant Color Picker (Web Tool)",
@@ -50,6 +49,14 @@
       linkBE: "https://github.com/rumirifai/Dominant-Color-Picker-Website",
       linkDemo: "https://docopick.streamlit.app/",
       image: "/images/docopick.png",
+    },
+    {
+      title: "KEPO 2024 (Static Web)",
+      description: "A static informative website for the KEPO 2024 event, designed to be fast, responsive, and easily accessible to participants.",
+      tags: ["Javascripts", "HTML", "CSS"],
+      linkBE: "https://github.com/rumirifai/KEPO-2024-WEB-APP",
+      linkDemo: "https://kepo2024.vercel.app/",
+      image: "/images/kepo2024.png",
     },
   ];
 
@@ -158,7 +165,8 @@
                         Live Demo
                       </a>
                     {/if}
-                    {#if project.linkFE}
+                
+                    {#if project.linkFE && project.linkBE}
                       <div class="flex space-x-2">
                         <a href={project.linkFE} target="_blank" class="block w-full text-center bg-stone-800 text-stone-100 font-semibold py-2 px-4 rounded-md hover:bg-stone-700 transition-colors">
                           Frontend
@@ -167,12 +175,12 @@
                           Backend
                         </a>
                       </div>
-                    {:else}
+                    {:else if project.linkBE && !project.linkFE}
                       <a href={project.linkBE} target="_blank" class="block w-full text-center bg-stone-800 text-stone-100 font-semibold py-2 px-4 rounded-md hover:bg-stone-700 transition-colors">
                         Code
                       </a>
                     {/if}
-                  </div>
+                </div>
                   </div>
               </div>
             {/each}
@@ -186,6 +194,23 @@
       
           <div class="relative border-l-2 border-stone-700 space-y-12">
             
+            <div class="relative pl-10">
+              <div class="absolute -left-[11px] top-1 w-5 h-5 bg-orange-500 rounded-full border-4 border-stone-900"></div>
+              
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold text-lg text-stone-100">Backend Developer & Maintainer</h4>
+                <p class="text-sm text-stone-400">02/2025 – Present</p>
+              </div>
+              <p class="text-stone-300 font-medium mb-3">Himatif Apps | Himpunan Mahasiswa Teknik Informatika UNPAD</p>
+              
+              <ul class="list-disc list-outside ml-5 text-stone-400 space-y-2 text-sm">
+                <li>Maintained the stability, security, and performance of all backend services for the official student association website.</li>
+                <li>Developed, tested, and integrated new features and API endpoints in response to organizational requirements.</li>
+                <li>Managed the MySQL database, including schema updates and routine backups to ensure data integrity.</li>
+                <li>Collaborated with the frontend team to ensure seamless API integration and resolve technical issues.</li>
+              </ul>
+            </div>
+
             <div class="relative pl-10">
               <div class="absolute -left-[11px] top-1 w-5 h-5 bg-orange-500 rounded-full border-4 border-stone-900"></div>
               
@@ -243,7 +268,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
             </a>
             
-            <a href="/cv-rumi-rifai.pdf" target="_blank" aria-label="Download my CV" title="Download my CV" class="text-stone-400 hover:text-orange-400 transition-transform hover:scale-110">
+            <a href="/Resume_Rumi_Rifai.pdf" target="_blank" aria-label="Download my CV" title="Download my CV" class="text-stone-400 hover:text-orange-400 transition-transform hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
             </a>
       
