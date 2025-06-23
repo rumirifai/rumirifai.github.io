@@ -42,14 +42,14 @@
       linkBE: "https://github.com/rumirifai/codetid-api",
       image: "/images/codetid.png",
     },
-    {
+    /* {
       title: "Dominant Color Picker (Web Tool)",
       description: "Web tool to extract dominant color palette from user-uploaded images.",
       tags: ["Python", "KMeans", "Streamlit"],
       linkBE: "https://github.com/rumirifai/Dominant-Color-Picker-Website",
       linkDemo: "https://docopick.streamlit.app/",
       image: "/images/docopick.png",
-    },
+    }, */
     {
       title: "KEPO 2024 (Static Web)",
       description: "A static informative website for the KEPO 2024 event, designed to be fast, responsive, and easily accessible to participants.",
@@ -130,7 +130,7 @@
             </p>
             <p class="flex items-center">
               <span class="text-xl mr-3">💻</span>
-              <span>Have high enthusiasm in software development, especially building scalable <strong>backend systems</strong>.</span>
+              <span>Possess a deep interest in software development, with a specific focus on building scalable <strong>backend systems</strong>.</span>
             </p>
             <p class="flex items-center">
               <span class="text-xl mr-3">💡</span>
